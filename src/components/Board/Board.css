@@ -1,0 +1,16 @@
+.row-board{
+    display: flex;
+    flex-direction: col;
+}
+
+.col-1-of-2{
+    padding-right: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+.zone-row{
+    display: flex;
+}
+.shipload-row {
+    display: flex;
+}

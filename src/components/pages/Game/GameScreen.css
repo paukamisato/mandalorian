@@ -1,0 +1,8 @@
+.game-container{
+    background-color: rgba(0, 122, 131, 0.5);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
