@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import './Dice.css';
 
-function Dice() {
+function Dice({ diceResult, rollDice }) {
   
-   const [diceResult, setDiceResult] = useState(1);
-  
-
   const diceImage = require(`../../images/${diceResult}.png`);
  
-
-  function rollDice() {
-    setDiceResult(Math.floor(Math.random() * 4) + 1);
-    
-  }
-
   return (
    
     <div className="dice-box">

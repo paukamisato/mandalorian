@@ -4,43 +4,43 @@ import EggSquare from '../Square/EggSquare';
 import FrogSquare from '../Square/FrogSquare';
 import './Board.css';
 
-const Board = ({squares}) => {
+const Board = ({ squares,cookieSquares, eggSquares, frogSquares}) => {
 
     const createSquares = values => (
         values.map( value => (
-          <Square 
+          <Square           
           value={squares[value]}
           key={`squares_${value}`}
           />
         ))
+        
     );
     const createCookieSquares = values => (
         values.map( value => (
           <CookieSquare 
-          value={squares[value]}
-          key={`squares_${value}`}
+          value={cookieSquares[value]}
+          key={`cookieSquares_${value}`}
           />
         ))
     );
     const createFrogSquares = values => (
         values.map( value => (
           <FrogSquare 
-          value={squares[value]}
-          key={`squares_${value}`}
+          value={frogSquares[value]}
+          key={`frogSquares_${value}`}
           />
         ))
     );
     const createEggSquares = values => (
         values.map( value => (
           <EggSquare 
-          value={squares[value]}
-          key={`squares_${value}`}
+          value={eggSquares[value]}
+          key={`eggSquares_${value}`}
           />
         ))
     );
 
-
-
+   
 
     return (
         <div className="board">
@@ -52,13 +52,13 @@ const Board = ({squares}) => {
                 </div>
                 <div className='col-1-of-2'>
                     <div className="shipload-row">
-                     {createCookieSquares([7,8,9])}
+                     {createCookieSquares([0,1,2])}
                     </div>
                     <div className="shipload-row">
-                        {createFrogSquares([10,11,12])}
+                        {createFrogSquares([0,1,2])}
                     </div>
                     <div className="shipload-row">
-                        {createEggSquares([13,14,15])}
+                        {createEggSquares([0,1,2])}
                     </div>
                 </div>
             </div>
